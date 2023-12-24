@@ -4,9 +4,21 @@
           <router-link to="/"><img src="../assets/images/logo_@1x-optimized.png" alt="header logo-top"></router-link>
         </div>
         <div class="header__controls-wrapper">
-          <router-link to="/">Главная</router-link>
-          <router-link to="/actors">Актеры</router-link>
-          <router-link to="/dates">Даты выхода</router-link>
+          <router-link to="/" 
+            class="header__controls-wrapper__link"
+          >
+            <span :class="{ active: isActive('/') }">Главная</span>
+          </router-link>
+          <router-link to="/actors" 
+            class="header__controls-wrapper__link"
+          >
+            <span :class="{ active: isActive('/actors') }">Актеры</span>
+          </router-link>
+          <router-link to="/dates" 
+            class="header__controls-wrapper__link"
+          >
+            <span :class="{ active: isActive('/dates') }">Даты выхода</span>
+          </router-link>
 
           <router-link to="/seriesList">
             <button id="list">
@@ -18,7 +30,19 @@
 </template>
 
 <script>
-
+export default {
+  name: 'HeaderTop',
+  data() {
+    return {
+      activeLink: '/'
+    }
+  },
+  methods: {
+    isActive(link) {
+      return this.activeLink === link
+    }
+  }
+}
 </script>
 
 <style>
@@ -34,7 +58,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
   /* border-bottom: 1px solid black; */
   position: fixed;
   top: 0;
@@ -43,13 +66,26 @@
 
 .header__logo-wrapper {
   margin: 20px 0 10px 0;
+  padding-left: 50px;
 }
-.header__controls-wrapper > a {
+
+.header__controls-wrapper {
+  padding-right: 50px;
+}
+
+.header__controls-wrapper__link {
   display: inline-block;
   font-size: 17px;
   padding-right: 50px;
   text-decoration: none;
   color: rgba(245, 236, 236, 0.922);
+  font-weight: 600;
+}
+
+
+.header__controls-wrapper__link:active,
+.header__controls-wrapper__link.active {
+  color: rgb(88, 88, 236);
 }
 
 button#list {
