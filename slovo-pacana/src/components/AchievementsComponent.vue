@@ -4,11 +4,13 @@
       <h2><span>Достижения</span> сериала</h2>
       <div class="achievements__container-items">
         <div class="container__item" v-for="item in achievements" :key="item.id">
-          <img class="container__item--img" :src="item.img" alt="raiting kinopoisk">
-          <div class="container__item--text">
-            <h5 class="item_h5">{{ item.headerText }}</h5>
-            <p>{{ item.text }}</p>
-          </div>
+          <a :href="item.href" target="_blank">
+            <img class="container__item--img" :src="item.img" alt="item.headerText">
+            <div class="container__item--text">
+              <h5 class="item_h5">{{ item.headerText }}</h5>
+              <p>{{ item.text }}</p>
+            </div>
+          </a>
         </div>
       </div>
     </div>
@@ -25,19 +27,22 @@ export default {
           id: 1,
           img: '../src/assets/images/raiting-kinopoisk.png',
           headerText: 'Оценка Кинопоиска',
-          text: '9.1 - именно такая оценка сериала на крупнейшем портале Кинопоиск.'
+          text: '9.1 - именно такая оценка сериала на крупнейшем портале Кинопоиск.',
+          href: 'https://www.kinopoisk.ru/film/5304403/votes/'
         },
         {
           id: 2,
           img: '../src/assets/images/top_250.png',
           headerText: 'ТОП Кинопоиска',
-          text: 'За месяц сериал вошел в ТОП 250 сериалов за все время.'
+          text: 'За месяц сериал вошел в ТОП 250 сериалов за все время.',
+          href: 'https://www.kinopoisk.ru/lists/movies/series-top250/'
         },
         {
           id: 3,
           img: '../src/assets/images/raiting-wink.png',
-          headerText: 'Оценка Кинопоиска',
-          text: '9.1 - именно такая оценка сериала на крупнейшем портале Кинопоиск.'
+          headerText: 'Оценка Wink',
+          text: '9.6 - оценка на площадке Wink, где транслируется сериал.',
+          href: 'https://wink.ru/series/slovo-patsana-year-2023'
         }
       ]
     }
