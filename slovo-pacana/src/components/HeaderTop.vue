@@ -14,10 +14,10 @@
           >
             <span :class="{ active: isActive('/actors') }">Актеры</span>
           </router-link>
-          <router-link to="/dates" 
+          <router-link to="/soundtracks" 
             class="header__controls-wrapper__link"
           >
-            <span :class="{ active: isActive('/dates') }">Даты выхода</span>
+            <span :class="{ active: isActive('/soundtracks') }">Саундтреки</span>
           </router-link>
 
           <router-link to="/seriesList">

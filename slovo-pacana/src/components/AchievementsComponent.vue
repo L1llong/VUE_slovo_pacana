@@ -83,6 +83,15 @@ export default {
   max-width: 50%;
 }
 
+.item_h5:hover::before {
+  content: "";
+  display: block;
+  width: 70%;
+  height: 1px;
+  background-color: #6de0f6;
+  margin: 0px 0px 5px 20px;
+}
+
 h2 > span {
   border-bottom: 4px solid #d1088b;
   color: #6de0f6

@@ -22,6 +22,11 @@ const router = createRouter({
             path: "/episode/:id",
             name: "episode",
             component: () => import("../pages/WatchEpisodePage.vue"),
+        },
+        {
+            path: "/soundtracks",
+            name: "soundtracks",
+            component: () => import("../pages/SoundtracksPage.vue"),
         }
     ],
 })

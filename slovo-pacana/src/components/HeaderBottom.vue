@@ -47,6 +47,7 @@ button#watch {
   width: 200px;
   height: 50px;
   margin-right: 20px;
+  cursor: pointer;
 }
 
 button#actors {
@@ -57,12 +58,11 @@ button#actors {
   padding: 10px 20px 10px 20px;
   width: 200px;
   height: 50px;
-
+  cursor: pointer;
 }
 
 .header__bottom-bar-logo-left > img {
   display: flex;
-  
   margin-bottom: 20px;
 }
 

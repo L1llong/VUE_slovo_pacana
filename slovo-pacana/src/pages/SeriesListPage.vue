@@ -135,6 +135,7 @@ h1 > strong {
     flex-wrap: wrap;
     padding: 0px 50px 60px 0 ;
     position: relative;
+    cursor: pointer;
 }
 
 .seriesPage__bottom-item > h3 {
